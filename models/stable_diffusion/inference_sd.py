@@ -13,6 +13,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--intervention', type = str, default=None)
 parser.add_argument('--are_classifier_prompts', action = 'store_true')
 parser.add_argument('--entity', type = str, default=None)
+parser.add_argument('--image_dump_dir', type = str, default='image dump directory')
 parser.add_argument('--output_fname', type = str, default='mindalle_output_person')
 parser.add_argument('--device_id', type=int, default=0)
 
@@ -35,7 +36,7 @@ loader = torch.utils.data.DataLoader(
     collate_fn=dataset.text_collate_fn,
 )
 
-image_dump_dir = f'../scratch/output_images/{args.output_fname}'
+image_dump_dir = f'{args.image_dump_dir}/{args.output_fname}'
 os.makedirs(image_dump_dir, exist_ok=True)
 
 n_seeds = 9

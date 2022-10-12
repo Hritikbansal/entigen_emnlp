@@ -11,6 +11,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--intervention', type = str, default=None)
 parser.add_argument('--entity', type = str, default=None)
+parser.add_argument('--image_dump_dir', type = str, default='image dump directory')
 parser.add_argument('--output_fname', type = str, default='minidalle_output_person')
 parser.add_argument('--device_id', type=str, default="2")
 parser.add_argument('--batch_size', type=int, default=8)

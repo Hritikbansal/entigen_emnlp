@@ -14,7 +14,6 @@ We suggest the users to follow their respective githubs to install the models. W
 
 The users can follow the [this](https://github.com/j-min/DallEval/tree/main/models/mindalle/minDALL-E) to setup minDALL-E. Our scripts are subset of this codebase.
 
-# TODO
+# Dataset
 
-- Inference Colab for each model
-- Running scores with clip.py
+All the prompts used in this work are made public on Huggingface Datasets - https://huggingface.co/datasets/hbXNov/entigen

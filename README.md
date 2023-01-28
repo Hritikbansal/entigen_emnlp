@@ -1,6 +1,6 @@
 # ENTIGEN_emnlp
 How well can Text-to-Image Generative Models understand Ethical Natural Language Interventions?
-Arxiv: [https://arxiv.org/abs/2210.15230](https://arxiv.org/abs/2210.15230)
+arxiv: [https://arxiv.org/abs/2210.15230](https://arxiv.org/abs/2210.15230)
 
 
 # Note

@@ -45,7 +45,10 @@ for seed in tqdm(range(n_seeds)):
     generator = torch.Generator(f"cuda:{args.device_id}").manual_seed(seed)
     with autocast():
         for batch in tqdm(loader):
-            images = pipe(batch['caption_aug'], generator = generator)["sample"]
+            # print("\n\n keys are:", pipe(batch['caption_aug'], generator = generator).keys(), "\n\n")
+            # /n/n keys are: odict_keys(['images', 'nsfw_content_detected']) /n/n 
+            # images = pipe(batch['caption_aug'], generator = generator)["sample"]
+            images = pipe(batch['caption_aug'], generator = generator)["images"]
             for i in range(len(images)):
                 caption = batch['caption'][i]
                 caption_dir = os.path.join(image_dump_dir, caption)
